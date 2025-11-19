@@ -1,24 +1,142 @@
-This is free and unencumbered software released into the public domain.
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>𝘿𝙚𝙯𝙕✘𝙈𝙊𝘿𝙎_KEY_RANDOM</title>
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+<style>
+    body {
+        background: linear-gradient(135deg, #0b1116, #0f1a21, #0a2425);
+        font-family: 'Orbitron', sans-serif;
+        color: #7dff7d;
+        text-align: center;
+        padding: 30px 20px;
+    }
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+    .container {
+        width: 95vw;
+        min-height: 88vh;
+        margin: auto;
+        padding: 30px;
+        background: rgba(15, 20, 20, 0.45);
+        border-radius: 35px;
+        border: 2px solid rgba(0,255,100,0.4);
+        box-shadow: 0 0 40px rgba(0,255,100,0.5);
+    }
 
-For more information, please refer to <https://unlicense.org>
+    #keyBox {
+        margin-top: 25px;
+        padding: 25px;
+        background: rgba(0,0,0,0.65);
+        color: #7dff7d;
+        border-radius: 20px;
+        font-size: 25px;
+        font-weight: 700;
+        border: 3px solid #00ff66;
+        box-shadow: 0 0 25px #00ff66;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 15px 25px;
+        font-size: 18px;
+        background: #00ff80;
+        color: black;
+        border: none;
+        font-family: 'Orbitron';
+        border-radius: 12px;
+        font-weight: bold;
+        box-shadow: 0 0 15px #00ff80;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    /* --- Bagian sosial --- */
+    .social-box {
+        margin-top: 40px;
+        color: #7dff7d;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 20px 5px;
+    }
+
+    .social-box a {
+        display: inline-block;
+        margin: 7px;
+        padding: 10px 18px;
+        border-radius: 10px;
+        border: 1px solid #00ff9d;
+        background: rgba(0,255,157,0.12);
+        text-decoration: none;
+        color: #00ff9d;
+        transition: 0.2s;
+    }
+
+    .social-box a:hover {
+        box-shadow: 0 0 12px #00ff9d;
+        transform: scale(1.05);
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Random Key Picker</h1>
+
+    <button onclick="pickKey()">GET KEY</button>
+    <div id="keyBox">Belum ada key dipilih</div>
+    <button onclick="copyKey()">COPY KEY</button>
+
+    <!-- BAGIAN PENJELASAN + SOSIAL -->
+    <div class="social-box">
+        <p>🔐 *Random Key Picker ini digunakan untuk mengambil key acak dari daftar yang disediakan= KEY THE KING OFC.<br>
+        GET KET THE KING OFC, 𝚂𝙰𝚈𝙰 @dezzmods 𝙰𝙳𝙰𝙻𝙰𝙷 𝙿𝙴𝙼𝙱𝚄𝙰𝚃 𝚆𝙴𝙱 𝙸𝙽𝙸, 𝚂𝙰𝚈𝙰 𝙼𝙴𝚁𝙰𝙽𝙲𝙰𝙽𝙶 𝚆𝙴𝙱 𝙸𝙽𝙸 𝚂𝙴𝙱𝙰𝙶𝙰𝙸 𝙶𝙴𝚃 𝙺𝙴𝚈</p>
+
+        <p style="margin-top: 15px; font-size: 30px;">📌 𝘿𝙚𝙯𝙕✘𝙈𝙊𝘿𝙎</p>
+
+        <a href="https://lynk.id/dezzreal" target="_blank">🌐 Produk digital</a>
+        <a href="https://youtube.com/@trioshorts145?si=4sL0IFJR2DZq6DR0" target="_blank">▶️ YouTube</a>
+        <a href="https://t.me/addlist/zNLRBwRsPOQ3OTZl" target="_blank">📢 Telegram</a>
+        <a href="https://sociabuzz.com/dezzreal" target="_blank">💰 Sociabuzz</a>
+        <a href="https://whatsapp.com/channel/0029Vb7Gl23EFeXuLGF1yB1G" target="_blank">💬 WhatsApp Channel</a>
+    </div>
+
+</div>
+
+<script>
+    const keyList = ["dezzzz", "jdexhhuu", "poaojajin"];
+
+    function pickKey() {
+        const randomIndex = Math.floor(Math.random() * keyList.length);
+        document.getElementById("keyBox").innerText = keyList[randomIndex];
+    }
+
+    function copyKey() {
+        const key = document.getElementById("keyBox").innerText;
+
+        if (key === "Belum ada key dipilih") {
+            alert("Belum ada key yang diambil!");
+            return;
+        }
+
+        const temp = document.createElement("textarea");
+        temp.value = key;
+        document.body.appendChild(temp);
+
+        temp.select();
+        document.execCommand("copy");
+        temp.remove();
+
+        alert("✔ Key berhasil disalin!");
+    }
+</script>
+
+</body>
+</html>
